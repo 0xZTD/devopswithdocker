@@ -1,0 +1,3 @@
+docker run -it -d ubuntu sh -c while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done
+docker exec romantic_johnson apt-get update
+docker exec romantic_johnson apt-get install curl -y
