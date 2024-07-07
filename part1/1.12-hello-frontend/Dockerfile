@@ -1,0 +1,21 @@
+FROM node:16 
+
+WORKDIR /usr/src/app
+
+COPY package* .
+
+RUN npm install
+
+EXPOSE 5000
+
+COPY . .
+
+RUN npm run build
+
+ENV NODE_PATH=/usr/src/app/node_modules
+
+RUN npm install -g serve
+
+ENTRYPOINT  ["/bin/bash","-c"] 
+
+CMD  ["serve -s -l 5000 build"] 
