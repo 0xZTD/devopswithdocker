@@ -1,0 +1,2 @@
+touch text.log
+docker run -v /home/zeth5/devops/helsinki/part1/text.log:/usr/src/app/text.log devopsdockeruh/simple-web-service
